@@ -50,7 +50,7 @@ def updateUser(user_update: UserUpdateRequest, user_id: UUID):
         status_code=404,
         detail=f"User with id: {user_id} does not exists"
     )   
-@app.delete("/api/users/{user_id}")  
+@app.delete("/api/users/{user_id}") 
 def deleteUser(user_id:UUID):
     for user in db:
         if user.id == user_id:
